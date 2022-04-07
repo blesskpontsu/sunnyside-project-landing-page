@@ -1,0 +1,40 @@
+$transition-300: 300ms ease-in-out;
+
+@keyframes show-navigation {
+    from {
+        opacity: 0;
+        transform: translateX(-90%);
+    }
+
+    1% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(105%);
+    }
+}
+
+.show-navigation {
+    animation: show-navigation $transition-300 forwards;
+}
+
+@keyframes hide-navigation {
+    from {
+        transform: translateX(90%);
+    }
+
+    99% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-90%);
+    }
+}
+
+.hide-navigation {
+    animation: hide-navigation $transition-300 forwards;
+}

@@ -1,0 +1,143 @@
+@use "../globals" as *;
+
+section{
+    & .container {
+        display: flex;
+        align-items: center;
+
+        @include breakpoint-up(md) {
+            flex-direction: row;
+
+            & figure, .intro-desc {
+                flex: 50%;
+                text-align: left;
+            }
+
+   
+
+        }
+
+        & figure.intro-img {
+            margin: 0;
+            & img {
+                vertical-align: top;
+                width:100%;
+            }
+        }
+
+        & .intro-desc {
+            padding: 4rem 2rem;
+            h2 {
+                font-family: $sub-font;
+                font-size: 2.3rem;
+                margin: 0;
+            }
+
+            & a {
+                display: block;
+                margin-top: 2.5rem;
+            }
+
+
+            @include breakpoint-up(lg) {
+                padding: 2rem 1rem;
+            }
+
+            @include breakpoint-up(md) {
+                padding: 1.1rem 1rem;
+                & h2, p {
+                    width: 90%;
+                    margin-left: 5%;
+                }
+
+                & h2 {
+                    font-size: 1.5rem;
+                }
+
+                & a {
+                    margin-left: 5%;
+                }
+            }
+            
+            @include breakpoint-up(lg) {
+                padding: 2rem 1rem;
+                & h2, p {
+                    width: 60%;
+                    margin-left: 20%;
+                }
+
+                & h2 {
+                    font-size: 2.3rem;
+                }
+
+                & a {
+                    margin-left: 20%;
+                }
+            }
+            
+            @include breakpoint-up(xl) {
+                padding: 2rem 1rem;
+                & h2, p {
+                    width: 50%;
+                    margin-left: 25%;
+                }
+
+                & h2 {
+                    font-size: 2.5rem;
+                }
+
+                & a {
+                    margin-left: 25%;
+                }
+            }
+
+        }
+    }
+
+    & .graphic-img-1 {
+        background: url(../../dist/images/mobile/image-graphic-design.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        @include breakpoint-up(md) {
+            background: url(../../dist/images/desktop/image-graphic-design.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+    
+    }
+
+    & .graphic-img-2 {
+        background: url(../../dist/images/mobile/image-photography.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        @include breakpoint-up(md) {
+            background: url(../../dist/images/desktop/image-photography.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+    }
+
+    & .graphic-img-1, .graphic-img-2 {
+        @include breakpoint-up(xl) {
+            padding-left: 13rem;
+            padding-right: 13rem;
+        }
+    }
+
+
+    @include breakpoint-up(md) {
+        figure.design-column {
+            text-align: center;
+        }
+    }
+
+
+
+    
+}

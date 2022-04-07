@@ -1,0 +1,22 @@
+@use "../globals" as *;
+
+section.gallery {
+    & .container {
+        flex-wrap: wrap;
+        & figure.gallery-img {
+            margin: 0;
+            width: 50%;
+
+            @include breakpoint-up(md) {
+                width: 25%;
+                flex: 25%;
+            }
+
+            & img {
+                vertical-align: top;
+                width: 100%;
+            }
+        }
+
+    }
+}

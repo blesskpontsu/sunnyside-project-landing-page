@@ -1,0 +1,487 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+@keyframes show-navigation {
+  from {
+    opacity: 0;
+    transform: translateX(-90%);
+  }
+  1% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(105%);
+  }
+}
+.show-navigation {
+  animation: show-navigation 300ms ease-in-out forwards;
+}
+
+@keyframes hide-navigation {
+  from {
+    transform: translateX(90%);
+  }
+  99% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-90%);
+  }
+}
+.hide-navigation {
+  animation: hide-navigation 300ms ease-in-out forwards;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.125rem;
+  color: #19536b;
+}
+
+p {
+  line-height: 1.8rem;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.3frem;
+  transition: 300ms ease-in-out;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.flex-ac-c {
+  align-content: center;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-sa {
+  justify-content: space-around;
+}
+
+.flex-c {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-c-r {
+  flex-direction: column-reverse;
+}
+
+@media only screen and (min-width: 36rem) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 47.9375rem) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.links {
+  text-decoration: none;
+  font-family: "Fraunces", serif;
+  color: #19536b;
+}
+
+.design-column {
+  margin: 0;
+  height: 650px;
+  padding: 26rem 2rem 0 2rem;
+}
+@media only screen and (min-width: 48rem) {
+  .design-column {
+    padding-left: 9%;
+    padding-right: 9%;
+  }
+}
+.design-column h2 {
+  font-family: "Fraunces", serif;
+}
+
+.pt-1 {
+  padding-top: 1rem;
+}
+
+.pt-2 {
+  padding-top: 2rem;
+}
+
+.pt-3 {
+  padding-top: 3rem;
+}
+
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
+.pb-2 {
+  padding-bottom: 2rem;
+}
+
+.p-3 {
+  padding-bottom: 3rem;
+}
+
+.header {
+  background: url(../../dist/images/mobile/image-header.jpg);
+  height: 60vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 24px 20px;
+}
+@media only screen and (min-width: 36rem) {
+  .header {
+    background: url(../../dist/images/desktop/image-header.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 3.125rem 2.5rem;
+  }
+}
+.header .mobile-menu {
+  position: absolute;
+  left: -90%;
+  width: 90%;
+  background-color: white;
+  margin-top: 3rem;
+  padding: 3rem;
+}
+.header .mobile-menu > a {
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #818498;
+  font-size: 1.3rem;
+}
+.header .mobile-menu > a:not(:last-child) {
+  padding-bottom: 2rem;
+}
+.header .mobile-menu > a:last-child {
+  color: #23303e;
+  padding: 1.2rem 1rem;
+  border-radius: 10rem;
+  background-color: #fad400;
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  font-size: 0.9rem;
+}
+.header.click-hamburger .header__hamburger > span:first-child {
+  transform: rotate(45deg);
+}
+.header.click-hamburger .header__hamburger > span:nth-child(2) {
+  visibility: hidden;
+}
+.header.click-hamburger .header__hamburger > span:last-child {
+  transform: rotate(-45deg);
+}
+.header .brand img {
+  width: 10rem;
+}
+.header__hamburger > span {
+  width: 30px;
+  height: 2px;
+  border-top: 3px solid #fff;
+  display: block;
+  transform-origin: 3px 1px;
+}
+.header__hamburger > span:not(:last-child) {
+  padding-bottom: 5px;
+}
+.header__links > a {
+  padding: 1.025rem 1.675rem;
+  color: white;
+  border-radius: 1.65rem;
+}
+.header__links > a:not(:last-child) {
+  margin-right: 0.9rem;
+}
+.header__links > a:hover {
+  background-color: #49abd4;
+}
+.header__links > a:last-child {
+  color: #23303e;
+  background-color: white;
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  font-size: 0.9rem;
+}
+.header__links > a:last-child:hover {
+  background-color: #49abd4;
+  color: white;
+}
+.header-text {
+  color: white;
+  font-family: "Fraunces", serif;
+  font-size: 1.8rem;
+  margin-top: 20%;
+}
+@media only screen and (min-width: 36rem) {
+  .header-text {
+    margin-top: 20%;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  .header-text {
+    margin-top: 30%;
+  }
+}
+@media only screen and (min-width: 62rem) {
+  .header-text {
+    margin-top: 12%;
+  }
+}
+@media only screen and (min-width: 75rem) {
+  .header-text {
+    margin-top: 14%;
+  }
+}
+
+section .container {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (min-width: 48rem) {
+  section .container {
+    flex-direction: row;
+  }
+  section .container figure, section .container .intro-desc {
+    flex: 50%;
+    text-align: left;
+  }
+}
+section .container figure.intro-img {
+  margin: 0;
+}
+section .container figure.intro-img img {
+  vertical-align: top;
+  width: 100%;
+}
+section .container .intro-desc {
+  padding: 4rem 2rem;
+}
+section .container .intro-desc h2 {
+  font-family: "Fraunces", serif;
+  font-size: 2.3rem;
+  margin: 0;
+}
+section .container .intro-desc a {
+  display: block;
+  margin-top: 2.5rem;
+}
+@media only screen and (min-width: 62rem) {
+  section .container .intro-desc {
+    padding: 2rem 1rem;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  section .container .intro-desc {
+    padding: 1.1rem 1rem;
+  }
+  section .container .intro-desc h2, section .container .intro-desc p {
+    width: 90%;
+    margin-left: 5%;
+  }
+  section .container .intro-desc h2 {
+    font-size: 1.5rem;
+  }
+  section .container .intro-desc a {
+    margin-left: 5%;
+  }
+}
+@media only screen and (min-width: 62rem) {
+  section .container .intro-desc {
+    padding: 2rem 1rem;
+  }
+  section .container .intro-desc h2, section .container .intro-desc p {
+    width: 60%;
+    margin-left: 20%;
+  }
+  section .container .intro-desc h2 {
+    font-size: 2.3rem;
+  }
+  section .container .intro-desc a {
+    margin-left: 20%;
+  }
+}
+@media only screen and (min-width: 75rem) {
+  section .container .intro-desc {
+    padding: 2rem 1rem;
+  }
+  section .container .intro-desc h2, section .container .intro-desc p {
+    width: 50%;
+    margin-left: 25%;
+  }
+  section .container .intro-desc h2 {
+    font-size: 2.5rem;
+  }
+  section .container .intro-desc a {
+    margin-left: 25%;
+  }
+}
+section .graphic-img-1 {
+  background: url(../../dist/images/mobile/image-graphic-design.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@media only screen and (min-width: 48rem) {
+  section .graphic-img-1 {
+    background: url(../../dist/images/desktop/image-graphic-design.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+section .graphic-img-2 {
+  background: url(../../dist/images/mobile/image-photography.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@media only screen and (min-width: 48rem) {
+  section .graphic-img-2 {
+    background: url(../../dist/images/desktop/image-photography.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+@media only screen and (min-width: 75rem) {
+  section .graphic-img-1, section .graphic-img-2 {
+    padding-left: 13rem;
+    padding-right: 13rem;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  section figure.design-column {
+    text-align: center;
+  }
+}
+
+section.testimonials .wrapper {
+  padding: 3rem 2.5rem 2rem 2.5rem;
+}
+@media only screen and (min-width: 62rem) {
+  section.testimonials .wrapper {
+    padding: 5rem 10rem;
+  }
+}
+section.testimonials .wrapper h2 {
+  letter-spacing: 0.2rem;
+  font-size: 1.3rem;
+}
+section.testimonials .wrapper h2, section.testimonials .wrapper h3 {
+  font-family: "Fraunces", serif;
+}
+section.testimonials .wrapper h2, section.testimonials .wrapper h5 {
+  color: #a7abae;
+}
+section.testimonials .wrapper p {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  font-size: 19px;
+  color: #818498;
+}
+section.testimonials .wrapper h5 {
+  margin-top: 0.8rem;
+}
+section.testimonials .wrapper .container .content {
+  margin-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+section.testimonials .wrapper .container .content img {
+  width: 80px;
+  border-radius: 50%;
+}
+@media only screen and (min-width: 48rem) {
+  section.testimonials .wrapper .container .content:not(:last-child) {
+    padding-right: 2rem;
+  }
+}
+@media only screen and (min-width: 62rem) {
+  section.testimonials .wrapper .container .content {
+    padding: 1rem;
+  }
+}
+
+section.gallery .container {
+  flex-wrap: wrap;
+}
+section.gallery .container figure.gallery-img {
+  margin: 0;
+  width: 50%;
+}
+@media only screen and (min-width: 48rem) {
+  section.gallery .container figure.gallery-img {
+    width: 25%;
+    flex: 25%;
+  }
+}
+section.gallery .container figure.gallery-img img {
+  vertical-align: top;
+  width: 100%;
+}
+
+footer {
+  background-color: #9ccec4;
+}
+footer .container {
+  padding: 4rem 2rem;
+}
+footer .container h2 {
+  font-size: 2rem;
+  color: #25564b;
+}
+footer .container .footer-nav {
+  margin: 3rem 0 4rem 0;
+}
+footer .container .footer-nav a {
+  color: #25564b;
+}
+footer .container .footer-nav a:hover {
+  color: white;
+}
+footer .container .footer-nav a:nth-child(2) {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+footer .container .socials a {
+  padding: 0 0.8rem;
+}
+
+/*# sourceMappingURL=main.css.map */

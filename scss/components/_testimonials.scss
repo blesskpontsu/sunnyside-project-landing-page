@@ -1,0 +1,58 @@
+@use "../globals" as *;
+
+section.testimonials {
+    & .wrapper {
+        padding: 3rem 2.5rem 2rem 2.5rem;
+        
+        @include breakpoint-up(lg) {
+            padding: 5rem 10rem;
+        }
+
+        & h2 {
+            letter-spacing: 0.2rem;
+            font-size: 1.3rem;
+        }
+
+        h2, h3 {
+            font-family: $sub-font;
+        }
+
+        & h2, h5 {
+            color: $Grayish-blue;
+        }
+
+        & p {
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            font-size: 19px;
+            color: $Dark-grayish-blue;
+        }
+
+        & h5 {
+            margin-top: 0.8rem;
+        }
+
+        & .container {
+            & .content {
+                margin-top: 2.5rem;
+                padding-bottom: 2.5rem;
+                & img {
+                    width: 80px;
+                    border-radius: 50%;
+                }
+
+                @include breakpoint-up(md) {
+                    &:not(:last-child) {
+                        padding-right: 2rem;
+                    }
+                }
+
+                @include breakpoint-up(lg) {
+                    padding: 1rem;
+                }
+
+               
+            }
+        }
+    }
+}

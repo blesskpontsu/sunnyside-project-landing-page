@@ -1,0 +1,38 @@
+@use "../globals" as *;
+
+footer {
+    background-color: lighten($Dark-moderate-cyan, 30%);
+
+    & .container {
+        padding: 4rem 2rem;
+
+        & h2 {
+            font-size: 2rem;
+            color: $Dark-desaturated-cyan;
+        }
+
+        & .footer-nav {
+            margin: 3rem 0 4rem 0;
+
+            & a {
+                color: $Dark-desaturated-cyan;
+
+                &:hover {
+                    color: $White;
+                }
+
+                &:nth-child(2) {
+                    padding-left: 4rem;
+                    padding-right: 4rem;
+                }
+            }
+        }
+
+        & .socials {
+            & a {
+                padding: 0 0.8rem;
+            }
+        }
+
+    }
+}

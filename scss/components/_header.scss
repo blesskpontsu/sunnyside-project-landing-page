@@ -1,0 +1,138 @@
+@use "../globals/" as *;
+
+.header {
+    background: url(../../dist/images/mobile/image-header.jpg);
+    height: 60vh;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 24px 20px;
+
+    @include breakpoint-up(sm) {
+        background: url(../../dist/images/desktop/image-header.jpg);
+        height: 90vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding: 3.125rem 2.5rem
+    }
+
+    & .mobile-menu {
+        position: absolute;
+        left: -90%;
+        width: 90%;
+        background-color: $White;
+        margin-top: 3rem;
+        padding: 3rem;
+        > a {
+            display: block;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            color: $Dark-grayish-blue;
+            font-size: 1.3rem;
+            &:not(:last-child) {
+                padding-bottom: 2rem;
+            }
+
+            &:last-child {
+                color: $Very-dark-desaturated-blue;
+                padding: 1.2rem 1rem;
+                border-radius: 10rem;
+                background-color: $Yellow;
+                text-transform: uppercase;
+                font-family: $sub-font;
+                font-size: 0.9rem;
+            }
+        }
+        
+    }
+
+    &.click-hamburger {
+        .header__hamburger {
+            > span {
+                &:first-child {
+                    transform: rotate(45deg); 
+                  }
+            
+                  &:nth-child(2) {
+                      visibility: hidden;
+                  }
+            
+                  &:last-child {
+                      transform: rotate(-45deg);
+                  }
+            }
+        }
+    }
+
+    & .brand {
+        & img {
+            width: 10rem;
+        }
+    }
+
+    &__hamburger {
+        > span {
+            width: 30px;
+            height: 2px;
+            border-top: 3px solid #fff;
+            display: block;
+            transform-origin: 3px 1px;
+            &:not(:last-child) {
+                padding-bottom: 5px;
+            }
+        }
+    }
+
+    &__links {
+        > a {
+            padding: 1.025rem 1.675rem;
+            color: $White;
+            border-radius: 1.65rem;
+
+            &:not(:last-child) {
+                margin-right: 0.9rem;
+            }
+
+            &:hover {
+                background-color: lighten($Dark-blue, 30%);
+            }
+
+            &:last-child {
+                color: $Very-dark-desaturated-blue;
+                background-color: $White;
+                text-transform: uppercase;
+                font-family: $sub-font;
+                font-size: 0.9rem;
+
+                &:hover {
+                    background-color: lighten($Dark-blue, 30%);
+                    color: $White;
+                }
+                
+            }
+        }
+    }
+
+    &-text {
+        color: $White;
+        font-family: $sub-font;
+        font-size: 1.8rem;
+        margin-top: 20%;
+
+        @include breakpoint-up(sm) {
+            margin-top: 20%;
+        }
+        @include breakpoint-up(md) {
+            margin-top: 30%;
+        }
+        @include breakpoint-up(lg) {
+            margin-top: 12%;
+        }
+
+        @include breakpoint-up(xl) {
+            margin-top: 14%;
+        }
+    }
+}
