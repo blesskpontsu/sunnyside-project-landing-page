@@ -109,7 +109,7 @@ a {
   text-align: center;
 }
 
-.links {
+.link1, .link2 {
   text-decoration: none;
   font-family: "Fraunces", serif;
   color: #19536b;
@@ -156,7 +156,7 @@ a {
 
 .header {
   background: url(../../dist/images/mobile/image-header.jpg);
-  height: 60vh;
+  height: 70vh;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -218,6 +218,7 @@ a {
   border-top: 3px solid #fff;
   display: block;
   transform-origin: 3px 1px;
+  transition: 300ms ease-in-out;
 }
 .header__hamburger > span:not(:last-child) {
   padding-bottom: 5px;
@@ -248,7 +249,7 @@ a {
   color: white;
   font-family: "Fraunces", serif;
   font-size: 1.8rem;
-  margin-top: 20%;
+  margin-top: 30%;
 }
 @media only screen and (min-width: 36rem) {
   .header-text {
@@ -257,18 +258,21 @@ a {
 }
 @media only screen and (min-width: 48rem) {
   .header-text {
-    margin-top: 30%;
+    margin-top: 35%;
   }
 }
 @media only screen and (min-width: 62rem) {
   .header-text {
-    margin-top: 12%;
+    margin-top: 5%;
   }
 }
 @media only screen and (min-width: 75rem) {
   .header-text {
     margin-top: 14%;
   }
+}
+.header-text img {
+  margin-top: 5rem;
 }
 
 section .container {
@@ -300,8 +304,26 @@ section .container .intro-desc h2 {
   margin: 0;
 }
 section .container .intro-desc a {
+  position: relative;
   display: block;
   margin-top: 2.5rem;
+  z-index: 1;
+  width: 8.5rem;
+}
+section .container .intro-desc a:hover::before {
+  content: "";
+  position: absolute;
+  border-radius: 1rem;
+  width: 8.5rem;
+  left: -5px;
+  margin-top: 1rem;
+  z-index: -1;
+}
+section .container .intro-desc a.link1::before {
+  border: 4px solid #fad400;
+}
+section .container .intro-desc a.link2::before {
+  border: 4px solid #fe7867;
 }
 @media only screen and (min-width: 62rem) {
   section .container .intro-desc {
@@ -482,6 +504,11 @@ footer .container .footer-nav a:nth-child(2) {
 }
 footer .container .socials a {
   padding: 0 0.8rem;
+  font-size: 1.5rem;
+  color: #25564b;
+}
+footer .container .socials a:hover {
+  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */

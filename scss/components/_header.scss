@@ -2,7 +2,7 @@
 
 .header {
     background: url(../../dist/images/mobile/image-header.jpg);
-    height: 60vh;
+    height: 70vh;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -79,6 +79,7 @@
             border-top: 3px solid #fff;
             display: block;
             transform-origin: 3px 1px;
+            transition: $transition-300;
             &:not(:last-child) {
                 padding-bottom: 5px;
             }
@@ -119,20 +120,24 @@
         color: $White;
         font-family: $sub-font;
         font-size: 1.8rem;
-        margin-top: 20%;
+        margin-top: 30%;
 
         @include breakpoint-up(sm) {
             margin-top: 20%;
         }
         @include breakpoint-up(md) {
-            margin-top: 30%;
+            margin-top: 35%;
         }
         @include breakpoint-up(lg) {
-            margin-top: 12%;
+            margin-top: 5%;
         }
 
         @include breakpoint-up(xl) {
             margin-top: 14%;
+        }
+
+        & img {
+            margin-top: 5rem;
         }
     }
 }

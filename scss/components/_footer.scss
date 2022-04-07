@@ -31,6 +31,12 @@ footer {
         & .socials {
             & a {
                 padding: 0 0.8rem;
+                font-size: 1.5rem;
+                color: $Dark-desaturated-cyan;
+
+                &:hover {
+                    color: $White;
+                }
             }
         }
 
